@@ -132,7 +132,7 @@ process FILTER_MASH {
     label 'process_single'
     publishDir "${params.outdir}/hits/${meta.id}", mode: 'copy'
 
-    container 'docker.io/library/python:3.11-slim'
+    container 'docker.io/library/python:3.11'
 
     input:
     tuple val(meta), path(screen)
@@ -267,7 +267,7 @@ process FILTER_COVERAGE {
     label 'process_single'
     publishDir "${params.outdir}/coverage/${meta.id}", mode: 'copy'
 
-    container 'docker.io/library/python:3.11-slim'
+    container 'docker.io/library/python:3.11'
 
     input:
     tuple val(meta), path(coverage)
